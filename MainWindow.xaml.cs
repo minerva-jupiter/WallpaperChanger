@@ -61,10 +61,23 @@ namespace WallpaperChanger
             }
             else
             {
-                string command = "";
+                string command = "WallpaperChangerBackground.exe" + wherePictureFile;
                 Process.Start("cmd.exe", command);
             }
             
+        }
+
+        private void WherePicturesFolder_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            bool directoryExists = System.IO.Directory.Exists(WherePicturesFolder.Text);
+            if(directoryExists == false)
+            {
+                MessageBox.Show("Folder you selected is not exists");
+            }
+            else
+            {
+                wherePictureFile = WherePicturesFolder.Text;
+            }
         }
     }
 }

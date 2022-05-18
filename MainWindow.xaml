@@ -8,7 +8,7 @@
         Title="Setting" Height="450" Width="800">
     <Grid x:Name="Setting" Background="Black">
         <Label x:Name="PicturesFolder" Content="This is pictures folder." HorizontalAlignment="Center" Margin="0,60,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontSize="36"/>
-        <TextBox x:Name="WherePicturesFolder" HorizontalAlignment="Left" Margin="224,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="273" Background="Black" Foreground="White" BorderBrush="White" Text="Where is pictures?" FontSize="22"/>
+        <TextBox x:Name="WherePicturesFolder" HorizontalAlignment="Left" Margin="224,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="273" Background="Black" Foreground="White" BorderBrush="White" Text="Where is pictures?" FontSize="22" DataContextChanged="WherePicturesFolder_DataContextChanged"/>
         <Button x:Name="Set" Content="Set folder" HorizontalAlignment="Left" Margin="497,0,0,0" VerticalAlignment="Center" Background="White" BorderBrush="White" Foreground="Black" FontSize="22" Width="79" Click="Set_Click"/>
         <Button x:Name="Run" Content="Run" HorizontalAlignment="Center" Margin="0,285,0,0" VerticalAlignment="Top" Background="White" BorderBrush="White" FontSize="36" Width="125" Click="Run_Click"/>
 
