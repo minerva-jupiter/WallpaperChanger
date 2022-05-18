@@ -29,6 +29,7 @@ namespace WallpaperChanger
             InitializeComponent();
         }
 
+        //Setボタンが押されたら、フォルダーを選択して、テキストボックスと変数に反映。
         private void Set_Click(object sender, RoutedEventArgs e)
         {
             using (var cofd = new CommonOpenFileDialog()
@@ -53,6 +54,7 @@ namespace WallpaperChanger
             }
         }
 
+        //Runボタンがクリックされたら、バックグラウンドアプリを起動
         private void Run_Click(object sender, RoutedEventArgs e)
         {
             if(wherePictureFile == null)
@@ -67,6 +69,7 @@ namespace WallpaperChanger
             
         }
 
+        //テキストボックスに直接フォルダーのパスを打ち込んだ場合
         private void WherePicturesFolder_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
             bool directoryExists = System.IO.Directory.Exists(WherePicturesFolder.Text);
@@ -77,6 +80,7 @@ namespace WallpaperChanger
             else
             {
                 wherePictureFile = WherePicturesFolder.Text;
+                MessageBox.Show("you selected", wherePictureFile);
             }
         }
     }
