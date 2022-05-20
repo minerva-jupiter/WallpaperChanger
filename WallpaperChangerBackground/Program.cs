@@ -19,6 +19,7 @@ UpdateWallPaper();
 void SetTimePicture()
 {
     int time = DateTime.Now.Hour;
+    //朝焼けに対応するメソッドを別途作成
     int whatPictureIndex = Array.IndexOf(fileNames,time);
     wherePictureFile = filePathes[whatPictureIndex];
 }
